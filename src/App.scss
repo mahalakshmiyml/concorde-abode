@@ -1,0 +1,293 @@
+/* The following block can be included in a custom.scss */
+
+/* make the customizations */
+$theme-colors: (
+  "primary": #09659E,
+  "secondary": #6c757d,
+  "dark": #343a40,
+  "success": #28a745,
+  "info": #E1D1AD,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #f8f9fa,
+);
+
+/* import bootstrap to set changes */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$primary-color: #09659E;
+$secondary-color: #E1D1AD;
+$white-color: white;
+$black-color: #000;
+$tertiary-color: #9D9E9E;
+$dark-color: #001524;
+
+// p {
+//   text-align: justify !important;
+// }
+
+#SRLLightbox {
+  .SRLDownloadButton {
+    display: none !important;
+  }
+}
+
+
+#navbar {
+  .nav-link {
+    padding: 0px 25px;
+    font-weight: 600;
+    color: $black-color;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-right: 1px solid $secondary-color;
+    &:hover {
+      color: $secondary-color;
+    }
+    &:last-child{
+      border-right: 0px;
+    }
+  }
+  .nav-item{
+    border-right: 1px solid $secondary-color;
+  }
+  .menu-area{
+    position: static;
+  }
+  .mega-area{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    right: 0;
+    bottom: 10%;
+    padding: 15px;
+  }
+  .dropdown-menu{
+    left: 10%;
+  }
+  .col-md-3{
+    width: 20%;
+  }
+  .dropdown:hover {
+    display: block;
+  }
+  .dropdown-menu[data-bs-popper] {
+    top:85% !important;
+  }
+}
+
+
+#side-contact-form {
+  .stickyForm {
+    position: fixed;
+    top: 25%;
+    width: 310px;
+    right: -310px;
+    text-align: center;
+    padding: 17px;
+    background: #0c0c0ce0;
+    border-radius: 0;
+    transition: 0.35s ease-in-out;
+    z-index: 999;
+    &.active {
+      right: 0;
+    }
+    .btn-hello {
+      background: $primary-color;
+      padding: 10px 32px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: -100px;
+      color: #fff;
+      height: 40px;
+      border-radius: 0;
+      font-size: 15px;
+      cursor: pointer;
+      transform: rotate(-90deg);
+      border: 0;
+      perspective: 100px;
+      outline: 0 !important;
+      &:hover {
+        background-color: white !important;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+      }
+      &::before {
+        background: white !important;
+      }
+    }
+    input[type="text"],
+    input[type="email"],input[type="tel"] {
+      width: 100% !important;
+      border: 0;
+      height: 35px;
+      background: 0 0;
+      border-bottom: 1px solid #ffffff;
+      margin-bottom: 13px;
+      color: #ffffff;
+      border-radius: 0;
+    }
+    &.top_size {
+      top: 0;
+    }
+    [type="submit"] {
+      background: $primary-color !important;
+      border: none;
+      height: 40px !important;
+      padding: 0 30px !important;
+      color: white;
+    }
+  }
+}
+
+
+#master-plan {
+  .nav-link {
+    color: $black-color !important;
+  }
+}
+
+#desktop-fix {
+  z-index: 1;
+  .custom {
+    z-index: 4;
+    left: 1%;
+    bottom: 0%;
+  }
+}
+#mobile-fix {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+
+#cre{
+  .btn-close {
+    color: $white-color !important;
+  }
+}
+
+#custom-content {
+  z-index: 1;
+}
+
+#contact {
+  top: 110px !important;
+  z-index: 0;
+}
+
+#UNIQUE_ID {
+  display: none !important;
+  .arrow {
+    display: none !important;
+  }
+}
+
+p {
+  text-align: justify !important;
+}
+
+#projects {
+  .pill-custom {
+    font-size: 10px !important;
+  }
+}
+.pill-custom {
+  font-size: 10px !important;
+}
+
+#responsive-navbar-nav {
+  p {
+    font-size: 12px !important;
+  }
+  .dropdown-item {
+    font-size: 16px !important;
+    &:focus {
+      background-color: transparent !important;
+    }
+  }
+}
+
+#pricing {
+  .nav-link {
+      color: $black-color !important;
+    &.active {
+      color: $black-color !important;
+    }
+  }
+}
+
+
+@include media-breakpoint-only(xs) { 
+  #navbar {
+    .col-md-3{
+      width: 100%;
+    }
+  }
+  p {
+    font-size: 12px !important;
+  }
+  li {
+    font-size:12px !important;
+  }
+  #overview {
+    td, th {
+      font-size: 12px !important;
+    }
+  }
+  #pricing {
+    .custom-button {
+      font-size:11px !important;
+    }
+    td {
+      font-size:12px !important;
+    }
+    th {
+      font-size:14px !important;
+    }
+  }
+  #custom-content {
+    .container {
+      position: static !important;
+      transform: translate(0)!important;
+    }
+    .shadow {
+      box-shadow: none !important;
+    }
+  }
+
+  .owl-carousel {
+    h2 {
+      font-size: 12px !important;
+    }
+    h3 {
+      font-size: 10px !important;
+    }
+  }
+ }
+@include media-breakpoint-only(sm) { 
+    #navbar {
+      .col-md-3{
+        width: 100%;
+      }
+    }
+  #pricing {
+    .custom-button {
+      font-size:12px !important;
+    }
+    td {
+      font-size:12px !important;
+    }
+    th {
+      font-size:14px !important;
+    }
+  }
+ }
+@include media-breakpoint-only(md) {  }
+@include media-breakpoint-only(lg) {  }
+@include media-breakpoint-only(xl) {  }
+@include media-breakpoint-only(xxl) {  }
