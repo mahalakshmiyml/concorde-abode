@@ -1,4 +1,9 @@
 import './App.scss';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,  
+} from "react-router-dom";
 import Home from './Components/Home';
 import Footer from './Components/Includes/Footer';
 import Menubar from './Components/Includes/Menubar';
@@ -6,9 +11,13 @@ import Menubar from './Components/Includes/Menubar';
 function App() {
   return (
     <>
+    <Router>
     <Menubar />
-    <Home />
-    <Footer />
+      <Routes>
+      <Route path="/" index element={<Home />}></Route>
+      </Routes>     
+      <Footer />  
+    </Router>
     </>
   );
 }

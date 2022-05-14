@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Col, Container, Row, Table } from "react-bootstrap";
+import { Accordion, Button, Col, Container, Row, Table } from "react-bootstrap";
 import Contact from "./Includes/Contact";
 import FixedIcons from "./Includes/FixedIcons";
 import Info from "./Includes/Info";
@@ -171,8 +171,8 @@ const Home = () => {
                           </thead>
                           <tbody>
                             <tr>
-                              <td>1 BHK </td>
-                              <td>650</td>
+                              <td>3 & 4BHK </td>
+                              <td>2178</td>
                               <td>
                                 <Button
                                   variant="dark"
@@ -185,9 +185,9 @@ const Home = () => {
                                 </Button>
                               </td>
                             </tr>
-                            <tr>
-                              <td>2 BHK </td>
-                              <td>950</td>
+                            {/* <tr>
+                              <td>4 BHK </td>
+                              <td>3000</td>
                               <td>
                                 <Button
                                   variant="dark"
@@ -199,7 +199,7 @@ const Home = () => {
                                   Price Sheet
                                 </Button>
                               </td>
-                            </tr>
+                            </tr> */}
                           </tbody>
                         </Table>
                       </div>
@@ -242,7 +242,7 @@ const Home = () => {
         <Container fluid>
           <Row className="justify-content-center">
             <h2 className="text-center py-3">Virtual Tour</h2>
-            <Col md={12}>
+            <Col md={6}>
               <iframe
                 width="100%"
                 height="330"
@@ -255,6 +255,46 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
+
+        <section id="faq" className="py-3 py-md-5">
+          <Container>
+            <Row className="justify-content-center">
+              <h2 className=" py-3"> Frequently Asked Questions </h2>
+              <Col md={6}>
+                <Accordion defaultActiveKey="0">
+                  <Accordion.Item eventKey="0" className="mb-3">
+                    <Accordion.Header>WHAT IS THE STARTING PRICE OF CONCORDE ABODE 99?</Accordion.Header>
+                    <Accordion.Body>
+                    The price of Concorde Abode 9 3 & 4 BHK premium Villa starts from INR 2 Cr*.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>WHERE IS CONCORDE ABODE 99 LOCATED?</Accordion.Header>
+                    <Accordion.Body>
+                    CONCORDE ABODE 99 is located Chandapura Dommasandra Road, Ramasagara Rd, Singena Agrahara, Bengaluru, Karnataka 560099
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </Col>
+              <Col md={6}>
+                <Accordion defaultActiveKey="0">
+                  <Accordion.Item eventKey="0" className="mb-3">
+                    <Accordion.Header>WHAT IS THE TOTAL LAND AREA OF CONCORDE ABODE 99?</Accordion.Header>
+                    <Accordion.Body>
+                    The total land area of CONCORDE ABODE 99 is 12.7 acres.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="1" className="mb-3">
+                    <Accordion.Header>WHAT ARE THE KEY AMENITIES AT CONCORDE ABODE 99?</Accordion.Header>
+                    <Accordion.Body>
+                    The amenities at CONCORDE ABODE 99 include E-Pod, Ping Pong Court, Outdoor Gym, Amphitheatre, Fruit Garden, Swimming Pool, Skating Rink, Billiards, Banquet and much more.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </Col>
+            </Row>
+          </Container>
+        </section>
       </div>
       <FixedIcons />
     </>
