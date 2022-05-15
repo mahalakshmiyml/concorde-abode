@@ -261,7 +261,7 @@ const Home = () => {
             <Row className="justify-content-center">
               <h2 className=" py-3"> Frequently Asked Questions </h2>
               <Col md={6}>
-                <Accordion defaultActiveKey="0">
+                <Accordion>
                   <Accordion.Item eventKey="0" className="mb-3">
                     <Accordion.Header>WHAT IS THE STARTING PRICE OF CONCORDE ABODE 99?</Accordion.Header>
                     <Accordion.Body>
@@ -277,7 +277,7 @@ const Home = () => {
                 </Accordion>
               </Col>
               <Col md={6}>
-                <Accordion defaultActiveKey="0">
+                <Accordion>
                   <Accordion.Item eventKey="0" className="mb-3">
                     <Accordion.Header>WHAT IS THE TOTAL LAND AREA OF CONCORDE ABODE 99?</Accordion.Header>
                     <Accordion.Body>
