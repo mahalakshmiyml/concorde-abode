@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Row, Col, Container, } from "react-bootstrap";
+import { Button, Row, Col, Container, InputGroup, } from "react-bootstrap";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
@@ -67,32 +67,30 @@ const Contact = () => {
               validationSchema={validationSchema}
               onSubmit={onSubmit}
             >
-              <Form className="bg-white p-3 rounded shadow">
-                <h4 className="py-3 text-center">
-                  Get Our Experts Call
-                </h4>
+              <Form className="bg-info p-3 rounded shadow">
+                <h2 className="pt-3 text-white text-center">
+                  Need Help?
+                </h2>
+                <h6 className="text-white text-center mb-2">
+                  Enquire Now!!!
+                </h6>
                 <Row className="mb-3">
                   <Col md={12}>
                     <div className="mb-3">
-                      <a
-                        href="tel:08095999000"
-                        className="btn btn-dark form-control fw-bold py-2"
-                      >
-                        <i className="fa fa-phone-volume"></i> +91 80959 99000
-                      </a>
-                    </div>
-                  </Col>
-                </Row>
-                <Row className="mb-3">
-                  <Col md={12}>
-                    <div className="mb-3">
+                    <InputGroup className="mb-3">
+                      <InputGroup.Text id="basic-addon1" className="bg-white border-end-0">
+                        <i className="fa fa-user text-info"></i>
+                      </InputGroup.Text>
                       <Field
+                        className="form-control border-start-0"
                         type="text"
-                        className="form-control"
+                        aria-label="Username"
+                        aria-describedby="basic-addon1"
                         id="name"
                         name="name"
                         placeholder="Name"
                       />
+                    </InputGroup>
                       <small className="text-danger">
                         <ErrorMessage name="name" />
                       </small>
@@ -102,13 +100,20 @@ const Contact = () => {
                 <Row className="mb-3">
                   <Col md={12}>
                     <div className="mb-3">
+                    <InputGroup className="mb-3">
+                      <InputGroup.Text id="basic-addon1" className="bg-white border-end-0">
+                        <i className="fa fa-envelope text-info"></i>
+                      </InputGroup.Text>
                       <Field
+                        className="form-control border-start-0"
                         type="email"
-                        className="form-control"
+                        aria-label="Username"
+                        aria-describedby="basic-addon1"
                         id="email"
                         name="email"
                         placeholder="Email"
                       />
+                    </InputGroup>
                       <small className="text-danger">
                         <ErrorMessage name="email" />
                       </small>
@@ -118,13 +123,20 @@ const Contact = () => {
                 <Row className="mb-3">
                   <Col md={12}>
                     <div className="mb-3">
+                    <InputGroup className="mb-3">
+                      <InputGroup.Text id="basic-addon1" className="bg-white border-end-0">
+                        <i className="fa fa-phone-volume text-info"></i>
+                      </InputGroup.Text>
                       <Field
+                        className="form-control border-start-0"
                         type="tel"
-                        className="form-control"
+                        aria-label="Username"
+                        aria-describedby="basic-addon1"
                         id="phone"
                         name="phone"
-                        placeholder="Enter phone number"
+                        placeholder="Phone No."
                       />
+                    </InputGroup>
                       <small className="text-danger">
                         <ErrorMessage name="phone" />
                       </small>
@@ -144,7 +156,7 @@ const Contact = () => {
                   <Col md={12}>
                     <div className="">
                       <Button
-                        className="btn btn-warning text-white fw-bold form-control"
+                        className="btn btn-dark text-white fw-bold form-control"
                         type="submit"
                       >
                         Submit

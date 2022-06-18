@@ -7,7 +7,7 @@ import Logo from "../../images/logo-1.png";
 import { Link, useNavigate } from "react-router-dom";
 import CountryDropdown from "country-dropdown-with-flags-for-react";
 
-const Modals = (props) => {
+const BrochureModal = (props) => {
   const [formStatus, setformStatus] = useState("");
   const [Download, setDownload] = useState(false);
   const navigate = useNavigate("/success");
@@ -181,4 +181,4 @@ const Modals = (props) => {
   );
 };
 
-export default Modals;
+export default BrochureModal;

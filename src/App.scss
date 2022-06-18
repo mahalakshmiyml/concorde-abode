@@ -6,7 +6,7 @@ $theme-colors: (
   "secondary": #6c757d,
   "dark": #343a40,
   "success": #28a745,
-  "info": #E1D1AD,
+  "info": #005AAB,
   "warning": #ffc107,
   "danger": #dc3545,
   "light": #f8f9fa,
@@ -19,7 +19,7 @@ $primary-color: #09659E;
 $secondary-color: #E1D1AD;
 $white-color: white;
 $black-color: #000;
-$tertiary-color: #9D9E9E;
+$tertiary-color: #005AAB;
 $dark-color: #001524;
 
 // p {
@@ -38,11 +38,11 @@ $dark-color: #001524;
     padding: 0px 25px;
     font-weight: 600;
     color: $black-color;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
-    border-right: 1px solid $secondary-color;
+    border-right: 1px solid $tertiary-color;
     &:hover {
-      color: $secondary-color;
+      color: $tertiary-color;
     }
     &:last-child{
       border-right: 0px;

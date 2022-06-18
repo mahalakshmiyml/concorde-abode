@@ -11,6 +11,7 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Logo from "../../images/logo-1.png";
+import BrochureModal from "./BrochureModal";
 import Modals from "./Modals";
 
 const TopHeader = () => {
@@ -255,10 +256,11 @@ const TopHeader = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Modals
+      <BrochureModal
         show={show}
         handleClose={handleClose}
         title="Download Brochure"
+        message="Please Fill in your details & Download the Complete Brochure"
         projectid="57a99891-ec20-472a-b230-187e20fee71f"
       />
     </div>

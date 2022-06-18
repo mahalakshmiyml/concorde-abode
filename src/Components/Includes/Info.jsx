@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import Modals from "./Modals";
 // import Modals from "./Modals"
 
 const Info = () => {
@@ -13,10 +14,10 @@ const Info = () => {
       className="pt-3 pb-3 pt-md-3 pb-md-3 px-3 rounded"
     >
       <Container fluid className="ps-0 pe-0">
-        <Row className="border-start border-5 bg-white shadow border-dark p-2">
+        <Row className="border-start rounded border-5 bg-info shadow border-dark p-2">
           <Col md={9}>
-            <h2>Need more information?</h2>
-            <p className="m-0">
+            <h2 className="text-white text-center text-start">Need more information?</h2>
+            <p className="m-0 text-white text-center text-start">
               Don't hesitate to download the brochure to know more details of
               this project.
             </p>
@@ -28,12 +29,13 @@ const Info = () => {
           </Col>
         </Row>
       </Container>
-      {/* <Modals
+      <Modals
         show={show}
         handleClose={handleClose}
-        title="Download Pricesheet"
+        title="Download Brochure"
+        message="Please Fill in your details & Download the Complete Brochure"
         projectid="57a99891-ec20-472a-b230-187e20fee71f"
-      /> */}
+      />
     </div>
   );
 

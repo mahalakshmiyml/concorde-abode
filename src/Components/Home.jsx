@@ -1,10 +1,20 @@
 import React, { useState } from "react";
-import { Accordion, Button, Col, Container, Row, Table } from "react-bootstrap";
+import {
+  Accordion,
+  Button,
+  Col,
+  Container,
+  Row,
+  Table,
+  Image,
+} from "react-bootstrap";
 import Contact from "./Includes/Contact";
 import FixedIcons from "./Includes/FixedIcons";
 import Info from "./Includes/Info";
 import MasterPlan from "./Includes/MasterPlan";
 import Slider from "./Includes/Slider";
+import Location from "../images/location.png";
+import Modals from "./Includes/Modals";
 
 const Home = () => {
   const [show, setShow] = useState(false);
@@ -23,7 +33,7 @@ const Home = () => {
                   <Row>
                     <Col md={12}>
                       <h2 className="pb-2 text-center py-2 py-md-5 fs-3">
-                        Project Highlights
+                        Conconrde Abode Overview
                       </h2>
                       <span className="bg-danger position-absolute start-50 span-line"></span>
                       <Table className="table table-bordered align-middle">
@@ -42,8 +52,8 @@ const Home = () => {
                             <td>159 units</td>
                           </tr>
                           <tr>
-                            <th>No. of Rooms</th>
-                            <td>3 & 4BHK</td>
+                            <th>No. of Bed Rooms</th>
+                            <td>4BHK</td>
                           </tr>
                         </tbody>
                       </Table>
@@ -94,6 +104,7 @@ const Home = () => {
                     </Col>
                   </Row>
                 </Container>
+                <Info />
               </section>
               <section id="master-plan" className="py-3 py-md-5 bg-light">
                 <Container fluid>
@@ -105,7 +116,7 @@ const Home = () => {
                 </Container>
               </section>
 
-              <section className="py-3 py-md-5" id="amenites">
+              <section className="py-3 py-md-5 d-none d-md-block" id="amenites">
                 <Container fluid className="ps-0 pe-0">
                   <Row className="justify-content-center">
                     <h2 className="text-center py-2 py-md-3 fs-3">Amenities</h2>
@@ -116,7 +127,6 @@ const Home = () => {
                         <li>Outdoor Gym</li>
                         <li>Community Garden</li>
                         <li>Contemplation Garden</li>
-
                         <li>Family Pavillion</li>
                         <li>Fruit Garden</li>
                         <li>Boot Camp</li>
@@ -149,6 +159,47 @@ const Home = () => {
                   </Row>
                 </Container>
               </section>
+
+              <section className="py-3 py-md-5 b-block d-md-none" id="amenites">
+                <Container fluid className="ps-0 pe-0">
+                  <Row className="justify-content-center">
+                    <h2 className="text-center py-2 py-md-3 fs-3">Amenities</h2>
+                    <Col md={4} xs={6}>
+                      <ul>
+                        <li>E-Pod</li>
+                        <li>Kids Play Area</li>
+                        <li>Outdoor Gym</li>
+                        <li>Community Garden</li>
+                        <li>Contemplation Garden</li>
+                        <li>Family Pavillion</li>
+                        <li>Fruit Garden</li>
+                        <li>Boot Camp</li>
+                        <li>Amphitheatre</li>
+                        <li>Banquet</li>
+                        <li>Billiards</li>
+                        <li>Mini Theatre</li>
+                      </ul>
+                    </Col>
+                    <Col md={4} xs={6}>
+                      <ul>
+                        <li>Gym</li>
+                        <li>Musical Garden</li>
+                        <li>Mini Tennis Court</li>
+                        <li>Ping Pong Court</li>
+                        <li>Skating Rink</li>
+                        <li>Sunken Seating</li>
+                        <li>Swimming Pool</li>
+                        <li>Sports Court</li>
+                        <li>Table Tennis</li>
+                        <li>Bio Pond</li>
+                        <li>Walkway Path</li>
+                        <li>Open Cafe</li>
+                      </ul>
+                    </Col>
+                  </Row>
+                </Container>
+              </section>
+
               <section id="pricing" className="py-3 py-md-3 bg-light">
                 <Container fluid>
                   <Row className="justify-content-center">
@@ -164,15 +215,15 @@ const Home = () => {
                         >
                           <thead>
                             <tr>
-                              <th>BHK</th>
+                              <th>Plot Size</th>
                               <th>Area (Sq.ft)</th>
                               <th>Price</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <td>3 & 4BHK </td>
-                              <td>2178</td>
+                              <td>4BHK - East Face</td>
+                              <td>1163</td>
                               <td>
                                 <Button
                                   variant="dark"
@@ -185,9 +236,9 @@ const Home = () => {
                                 </Button>
                               </td>
                             </tr>
-                            {/* <tr>
-                              <td>4 BHK </td>
-                              <td>3000</td>
+                            <tr>
+                              <td>4BHK - North Face</td>
+                              <td>1163</td>
                               <td>
                                 <Button
                                   variant="dark"
@@ -199,7 +250,67 @@ const Home = () => {
                                   Price Sheet
                                 </Button>
                               </td>
-                            </tr> */}
+                            </tr>
+                            <tr>
+                              <td>4BHK - West Face</td>
+                              <td>1163</td>
+                              <td>
+                                <Button
+                                  variant="dark"
+                                  size="sm"
+                                  onClick={handleShow}
+                                  className="my-3 custom-button"
+                                >
+                                  <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                                  Price Sheet
+                                </Button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>4BHK - West Face</td>
+                              <td>1292</td>
+                              <td>
+                                <Button
+                                  variant="dark"
+                                  size="sm"
+                                  onClick={handleShow}
+                                  className="my-3 custom-button"
+                                >
+                                  <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                                  Price Sheet
+                                </Button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>4BHK - East Face</td>
+                              <td>1615</td>
+                              <td>
+                                <Button
+                                  variant="dark"
+                                  size="sm"
+                                  onClick={handleShow}
+                                  className="my-3 custom-button"
+                                >
+                                  <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                                  Price Sheet
+                                </Button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>4BHK - West Face</td>
+                              <td>1615</td>
+                              <td>
+                                <Button
+                                  variant="dark"
+                                  size="sm"
+                                  onClick={handleShow}
+                                  className="my-3 custom-button"
+                                >
+                                  <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
+                                  Price Sheet
+                                </Button>
+                              </td>
+                            </tr>
                           </tbody>
                         </Table>
                       </div>
@@ -210,11 +321,11 @@ const Home = () => {
               <section className="py-3 py-md-3">
                 <Info />
               </section>
-              <section id="location" className="py-3 py-md-3 bg-light">
+              <section id="location" className="py-3 py-md-3">
                 <Container fluid>
                   <h2 className="text-center py-md-3">Location</h2>
                   <Row className=" justify-content-center">
-                    <Col md={12}>
+                    <Col md={6}>
                       {/* <div className="text-center">
               <Image src={Location} className="img-fluid" alt="" />
             </div> */}
@@ -225,6 +336,11 @@ const Home = () => {
                           width="100%"
                           height="450"
                         ></iframe>
+                      </div>
+                    </Col>
+                    <Col md={6}>
+                      <div className="text-center">
+                        <Image src={Location} className="img-fluid" alt="" />
                       </div>
                     </Col>
                   </Row>
@@ -238,7 +354,7 @@ const Home = () => {
         </Container>
       </div>
 
-      <div id="virtual-tour" className="py-3 py-md-3 bg-light">
+      <div id="virtual-tour" className="py-3 py-md-5 bg-light">
         <Container fluid>
           <Row className="justify-content-center">
             <h2 className="text-center py-3">Virtual Tour</h2>
@@ -248,55 +364,73 @@ const Home = () => {
                 height="330"
                 src="https://www.youtube.com/embed/tZ8XuJRzAR4"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </Col>
           </Row>
         </Container>
-
-        <section id="faq" className="py-3 py-md-5">
-          <Container>
-            <Row className="justify-content-center">
-              <h2 className=" py-3"> Frequently Asked Questions </h2>
-              <Col md={6}>
-                <Accordion>
-                  <Accordion.Item eventKey="0" className="mb-3">
-                    <Accordion.Header>WHAT IS THE STARTING PRICE OF CONCORDE ABODE 99?</Accordion.Header>
-                    <Accordion.Body>
-                    The price of Concorde Abode 9 3 & 4 BHK premium Villa starts from INR 2 Cr*.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="1">
-                    <Accordion.Header>WHERE IS CONCORDE ABODE 99 LOCATED?</Accordion.Header>
-                    <Accordion.Body>
-                    CONCORDE ABODE 99 is located Chandapura Dommasandra Road, Ramasagara Rd, Singena Agrahara, Bengaluru, Karnataka 560099
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion>
-              </Col>
-              <Col md={6}>
-                <Accordion>
-                  <Accordion.Item eventKey="0" className="mb-3">
-                    <Accordion.Header>WHAT IS THE TOTAL LAND AREA OF CONCORDE ABODE 99?</Accordion.Header>
-                    <Accordion.Body>
-                    The total land area of CONCORDE ABODE 99 is 12.7 acres.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="1" className="mb-3">
-                    <Accordion.Header>WHAT ARE THE KEY AMENITIES AT CONCORDE ABODE 99?</Accordion.Header>
-                    <Accordion.Body>
-                    The amenities at CONCORDE ABODE 99 include E-Pod, Ping Pong Court, Outdoor Gym, Amphitheatre, Fruit Garden, Swimming Pool, Skating Rink, Billiards, Banquet and much more.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion>
-              </Col>
-            </Row>
-          </Container>
-        </section>
       </div>
+      <section id="faq" className="py-3 py-md-5">
+        <Container>
+          <Row className="justify-content-center">
+            <h2 className="text-center py-3"> Frequently Asked Questions </h2>
+            <Col md={6}>
+              <Accordion>
+                <Accordion.Item eventKey="0" className="mb-3">
+                  <Accordion.Header>
+                    WHAT IS THE STARTING PRICE OF CONCORDE ABODE 99?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    The price of Concorde Abode 9 3 & 4 BHK premium Villa starts
+                    from INR 2 Cr*.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header>
+                    WHERE IS CONCORDE ABODE 99 LOCATED?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    CONCORDE ABODE 99 is located Chandapura Dommasandra Road,
+                    Ramasagara Rd, Singena Agrahara, Bengaluru, Karnataka 560099
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </Col>
+            <Col md={6}>
+              <Accordion>
+                <Accordion.Item eventKey="0" className="mb-3">
+                  <Accordion.Header>
+                    WHAT IS THE TOTAL LAND AREA OF CONCORDE ABODE 99?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    The total land area of CONCORDE ABODE 99 is 12.7 acres.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1" className="mb-3">
+                  <Accordion.Header>
+                    WHAT ARE THE KEY AMENITIES AT CONCORDE ABODE 99?
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    The amenities at CONCORDE ABODE 99 include E-Pod, Ping Pong
+                    Court, Outdoor Gym, Amphitheatre, Fruit Garden, Swimming
+                    Pool, Skating Rink, Billiards, Banquet and much more.
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </Col>
+          </Row>
+        </Container>
+      </section>
       <FixedIcons />
+      <Modals
+        show={show}
+        handleClose={handleClose}
+        title="Download Brochure"
+        message="Please Fill in your details & Download the Complete Brochure"
+        projectid="57a99891-ec20-472a-b230-187e20fee71f"
+      />
     </>
   );
 };
