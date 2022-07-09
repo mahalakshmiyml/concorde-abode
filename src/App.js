@@ -7,6 +7,7 @@ import {
 import Home from './Components/Home';
 import Footer from './Components/Includes/Footer';
 import Menubar from './Components/Includes/Menubar';
+import PrivacyPolicy from './Components/Includes/PrivacyPolicy';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     <Menubar />
       <Routes>
       <Route path="/" index element={<Home />}></Route>
+      <Route path="/privacy-policy" index element={<PrivacyPolicy />}></Route>
       </Routes>     
       <Footer />  
     </Router>

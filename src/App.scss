@@ -178,6 +178,9 @@ $dark-color: #001524;
 #contact {
   top: 110px !important;
   z-index: 0;
+  input {
+    height:50px;
+  }
 }
 
 #UNIQUE_ID {

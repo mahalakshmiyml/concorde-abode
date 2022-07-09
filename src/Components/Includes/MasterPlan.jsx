@@ -3,29 +3,27 @@ import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
 import AllImages from "./AllImages";
 import FiveBhk from "./FiveBhk";
 import FourBhk from "./FourBhk";
+import Info from "./Info";
 import MasterPlanImages from "./MasterPlanImages";
 import SevenBhk from "./SevenBhk";
 import SixBhk from "./SixBhk";
 import ThreeBhk from "./ThreeBhk";
 
-
 const MasterPlan = () => {
-  const [key, setKey] = useState("all");
+  const [key, setKey] = useState("matster-plan");
 
   return (
     <div>
-      <h2 className="pt-2 pb-2 text-center fs-3">
-        Concorde Master & Floor Plans
-      </h2>
+      <h2 className="pt-2 pb-2 text-center fs-3">Concorde Abode Floor Plans</h2>
       <Tabs
         id="controlled-tab-example"
         activeKey={key}
         onSelect={(k) => setKey(k)}
         className="mb-3 text-dark"
       >
-        <Tab eventKey="all" title="Master Plan" className="text-dark">
+        {/* <Tab eventKey="all" title="Master Plan" className="text-dark">
           <AllImages />
-        </Tab>
+        </Tab> */}
         <Tab eventKey="matster-plan" title="Layout 1" className="text-dark">
           <MasterPlanImages />
         </Tab>
@@ -45,6 +43,9 @@ const MasterPlan = () => {
           <SixBhk />
         </Tab>
       </Tabs>
+      <section className="py-3 py-md-3">
+        <Info />
+      </section>
     </div>
   );
 };

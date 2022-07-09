@@ -15,6 +15,7 @@ import MasterPlan from "./Includes/MasterPlan";
 import Slider from "./Includes/Slider";
 import Location from "../images/location.png";
 import Modals from "./Includes/Modals";
+import AllImages from "./Includes/AllImages";
 
 const Home = () => {
   const [show, setShow] = useState(false);
@@ -27,7 +28,7 @@ const Home = () => {
       <div className="py-3 py-md-3">
         <Container fluid>
           <Row>
-            <Col md={9}>
+            <Col md={8}>
               <section id="overview" className="py-3 py-md-5 bg-light">
                 <Container fluid className="ps-0 pe-0">
                   <Row>
@@ -80,13 +81,13 @@ const Home = () => {
                         Come, experience it at Concorde Abode 99.
                       </p>
                       <p>
-                        Each villa at Concorde Abode 99 is fashioned to be a
-                        seamless blend of luxury and technology. An efficient
-                        floor layout complemented by a clear height of 10 feet
-                        creates a living expanse where life thrives! The villa
-                        is topped off with an expansive Recreational Deck that
-                        has been crafted to play host to the best moments of
-                        your life!
+                        Each 4 BHK villa Sarjapur Road at Concorde Abode 99 is
+                        fashioned to be a seamless blend of luxury and
+                        technology. An efficient floor layout complemented by a
+                        clear height of 10 feet creates a living expanse where
+                        life thrives! The villa is topped off with an expansive
+                        Recreational Deck that has been crafted to play host to
+                        the best moments of your life!
                       </p>
                       <p>
                         Your home at Concorde Abode 99 comes with a Club
@@ -106,6 +107,21 @@ const Home = () => {
                 </Container>
                 <Info />
               </section>
+
+              <section>
+                <Container>
+                  <Row>
+                    <Col md={12}>
+                      <h2 className="pt-2 pb-2 text-center fs-3">
+                        Concorde Abode Master Plans
+                      </h2>
+                    </Col>
+                  </Row>
+                </Container>
+
+                <AllImages />
+              </section>
+
               <section id="master-plan" className="py-3 py-md-5 bg-light">
                 <Container fluid>
                   <Row>
@@ -218,12 +234,14 @@ const Home = () => {
                               <th>Plot Size</th>
                               <th>Area (Sq.ft)</th>
                               <th>Price</th>
+                              <th>Price Breakup</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td>4BHK - East Face</td>
-                              <td>1163</td>
+                              <td>2211</td>
+                              <td>2.19Cr*</td>
                               <td>
                                 <Button
                                   variant="dark"
@@ -238,7 +256,8 @@ const Home = () => {
                             </tr>
                             <tr>
                               <td>4BHK - North Face</td>
-                              <td>1163</td>
+                              <td>2625</td>
+                              <td>2.40Cr*</td>
                               <td>
                                 <Button
                                   variant="dark"
@@ -253,7 +272,8 @@ const Home = () => {
                             </tr>
                             <tr>
                               <td>4BHK - West Face</td>
-                              <td>1163</td>
+                              <td>2965</td>
+                              <td>2.60Cr*</td>
                               <td>
                                 <Button
                                   variant="dark"
@@ -268,7 +288,8 @@ const Home = () => {
                             </tr>
                             <tr>
                               <td>4BHK - West Face</td>
-                              <td>1292</td>
+                              <td>3465</td>
+                              <td>2.79Cr*</td>
                               <td>
                                 <Button
                                   variant="dark"
@@ -283,22 +304,8 @@ const Home = () => {
                             </tr>
                             <tr>
                               <td>4BHK - East Face</td>
-                              <td>1615</td>
-                              <td>
-                                <Button
-                                  variant="dark"
-                                  size="sm"
-                                  onClick={handleShow}
-                                  className="my-3 custom-button"
-                                >
-                                  <i className="fa fa-spinner fa-flip fa-download"></i>{" "}
-                                  Price Sheet
-                                </Button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>4BHK - West Face</td>
-                              <td>1615</td>
+                              <td>3943</td>
+                              <td>3.79Cr*</td>
                               <td>
                                 <Button
                                   variant="dark"
@@ -347,7 +354,7 @@ const Home = () => {
                 </Container>
               </section>
             </Col>
-            <Col md={3}>
+            <Col md={4}>
               <Contact />
             </Col>
           </Row>
@@ -383,8 +390,8 @@ const Home = () => {
                     WHAT IS THE STARTING PRICE OF CONCORDE ABODE 99?
                   </Accordion.Header>
                   <Accordion.Body>
-                    The price of Concorde Abode 9 3 & 4 BHK premium Villa starts
-                    from INR 2 Cr*.
+                    The price of Concorde Abode 99 3 & 4 BHK premium Villa
+                    starts from INR 2 Cr*.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
@@ -392,8 +399,9 @@ const Home = () => {
                     WHERE IS CONCORDE ABODE 99 LOCATED?
                   </Accordion.Header>
                   <Accordion.Body>
-                    CONCORDE ABODE 99 is located Chandapura Dommasandra Road,
-                    Ramasagara Rd, Singena Agrahara, Bengaluru, Karnataka 560099
+                    CONCORDE ABODE 99 Sarjapur Road is located Chandapura
+                    Dommasandra Road, Ramasagara Rd, Singena Agrahara,
+                    Bengaluru, Karnataka 560099
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
